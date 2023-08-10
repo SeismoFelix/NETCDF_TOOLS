@@ -54,15 +54,18 @@ def print_vm_boundaries(lat,lon,depth):
     print("\nVelocity model boundaries:")
     dlat = (np.max(lat)-np.min(lat))/len(lat)
     dlat = round_to_1(dlat)
-    print("Latitude min/max/step {}/{}/{}".format(np.min(lat),np.max(lat),dlat))
+    print("Latitude min/max {}/{}:".format(np.min(lat),np.max(lat)))
+    print(lat)
 
     dlon = (np.max(lon)-np.min(lon))/len(lon)
     dlon = round_to_1(dlon)
-    print("Longitude min/max/step {}/{}/{}".format(np.min(lon),np.max(lon),dlon))
+    print("Longitude min/max {}/{}".format(np.min(lon),np.max(lon),dlon))
+    print(lon)
 
     ddepth = (np.max(depth)-np.min(depth))/len(depth)
     ddepth= round_to_1(ddepth)
-    print("Depth min/max/step {}/{}/{}".format(np.min(depth),np.max(depth),ddepth))
+    print("Depth min/max {}/{}".format(np.min(depth),np.max(depth)))
+    print(depth)
 
 def round_to_1(x):
    #https://stackoverflow.com/questions/3410976/how-to-round-a-number-to-significant-figures-in-python
@@ -120,7 +123,7 @@ def search_nan(lon,lat,d,data_array):
 
 if __name__=='__main__':
 
-    netcdf_file = 'MESWA.nc'
+    netcdf_file = 'MESWA_2.nc'
     #ds = nc.Dataset(netcdf_file)
     ds = xr.open_dataset(netcdf_file)
     #print(ds)
