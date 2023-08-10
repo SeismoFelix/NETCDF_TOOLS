@@ -123,7 +123,7 @@ def search_nan(lon,lat,d,data_array):
 
 if __name__=='__main__':
 
-    netcdf_file = 'MESWA_2.nc'
+    netcdf_file = 'MESWA.nc'
     #ds = nc.Dataset(netcdf_file)
     ds = xr.open_dataset(netcdf_file)
     #print(ds)
