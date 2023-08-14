@@ -1,0 +1,4 @@
+Variable: VP
+Depth: 10
+Latitude_boundaries: 10/50
+Longitude_boundaries: 24/76
